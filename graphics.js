@@ -247,8 +247,8 @@ function updateConstructionWorkers() {
 function updateStatusUpgrades(unit, type) {
 	typeNum = convertTypeToNum(type, "right")
 	document.getElementById("buy").innerHTML=upgradePointsInitial[typeNum];
-	document.getElementById("cost").innerHTML=round(unitCosts[typeNum]);
-	document.getElementById("costSpawn").innerHTML=round(costSpawnRate[typeNum]);
+	document.getElementById("cost").innerHTML=ceil(unitCosts[typeNum]);
+	document.getElementById("costSpawn").innerHTML=ceil(costSpawnRate[typeNum]);
 	if(upgradePointsInitial[typeNum] && document.getElementById("slider").children.length == 0)
 		slider('slider');
 	if(upgradePointsInitial[typeNum])
