@@ -16,7 +16,8 @@ function intToStringRound(value, type=0) {
     return toSuffix(value, type);
   }
   else {
-    if(type == 0 ? return Math.floor(value) : return Math.ceil(value));
+    if(type == 0) return Math.floor(value);
+    if(type == 1) return Math.ceil(value);
   }
 }
 
